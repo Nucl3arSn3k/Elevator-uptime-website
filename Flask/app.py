@@ -8,4 +8,9 @@ def hello_world():
     return render_template("home.html")
 
 
+@app.route("/form.html")
+def form():
+    return render_template("form.html")
+
+
 app.run()
