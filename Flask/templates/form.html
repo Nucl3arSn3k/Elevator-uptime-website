@@ -2,20 +2,37 @@
 
 <head>
     <title>Test Input</title>
-    <SCRIPT LANGUAGE="JavaScript">
-        function testResults(form) {
-            var TestVar = form.inputbox.value;
-            alert("You typed: " + TestVar);
-        }
-    </SCRIPT>
+
 </head>
 
 <body>
-    <form NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <br>
-        <INPUT TYPE="text" NAME="inputbox" VALUE="">
-        <P>
-            <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
-    </FORM>
+    <h1>Please update us on the elevator status</h1>
+    <form method="post">
+
+
+
+        <input type="radio" id="down1" name="Down" placeholder="Message title"
+            value="{{ request.form['title'] }}"></input>
+        <label for="down1">Elevator 1 is down.</label>
+
+        <input type="radio" id="up1" name="Down" placeholder="Message title"
+            value="{{ request.form['title'] }}"></input>
+        <label for="up1">Elevator 1 is up.</label>
+
+        <input type="radio" id="down2" name="Down" placeholder="Message title"
+            value="{{ request.form['title'] }}"></input>
+        <label for="down2">Elevator 2 is down.</label><br>
+
+        <input type="radio" id="up2" name="Down" placeholder="Message title"
+            value="{{ request.form['title'] }}"></input>
+        <label for="up2">Elevator 2 is up.</label><br>
+
+
+
+
+
+        <button type="submit">Submit</button>
+    </form>
 </BODY>
 
 </html>
